@@ -50,6 +50,8 @@ transform.html.css = function (filepath) {
   return '<link rel="stylesheet" href="' + filepath + '"' + end();
 };
 
+transform.html.less = transform.html.css;
+
 transform.html.js = function (filepath) {
   return '<script src="' + filepath + '"></script>';
 };

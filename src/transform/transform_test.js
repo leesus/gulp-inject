@@ -50,6 +50,11 @@ describe('transform', function () {
       transform.html.css('test-file.css').should.equal('<link rel="stylesheet" href="test-file.css">');
     });
 
+    it('should transform less to a link tag', function () {
+      transform.html.less.should.be.type('function');
+      transform.html.less('test-file.less').should.equal('<link rel="stylesheet" href="test-file.less">');
+    });
+
     it('should transform html to a link tag', function () {
       transform.html.html.should.be.type('function');
       transform.html.html('test-file.html').should.equal('<link rel="import" href="test-file.html">');
